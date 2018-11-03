@@ -1,0 +1,6 @@
+# Card 0 is the only card, and device 3 is HDMI.
+pcm.!default {
+    type hw
+    card 0
+    device 3
+}

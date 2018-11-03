@@ -7,7 +7,6 @@ add_user_to_groups:
   - user:               'display'
     groups:             'audio'
 install_packages:
-  - 'pulseaudio'
   - 'pavucontrol'
   - 'xserver-xorg'
   - 'xinit'
@@ -47,6 +46,11 @@ install_files:
     mode:               '0644'
     src:                "{{ role_path }}/files/conf/i3_config"
     dest:               '/home/display/.config/i3/config'
+  - owner:              'display'
+    group:              'display'
+    mode:               '0644'
+    src:                "{{ role_path }}/files/conf/asoundrc"
+    dest:               '/home/display/.asoundrc'  
   - owner:              'display'
     group:              'display'
     mode:               '0644'
