@@ -1,4 +1,5 @@
 pulseaudio --start
+pactl alsa_card.pci-0000_00_1b.0 output:hdmi-stereo
 xrandr --output LVDS-1 --off
 if test 12 -eq $(date +%m); then
   # Merry Christmas.
