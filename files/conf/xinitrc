@@ -4,7 +4,14 @@ while true; do
   pactl set-card-profile alsa_card.pci-0000_00_1b.0 output:hdmi-stereo
 done &
 echo $! > ~/.pactl_loop.pid
-xrandr --output LVDS-1 --off
+while true; do
+  sleep 1
+  if xrandr | grep -q 'HDMI-1 connected'; then
+    xrandr --output LVDS-1 --off
+    xrandr --output HDMI-1 --auto
+  fi
+done &
+echo $! > ~/.xrandr_loop.pid
 if test 12 -eq $(date +%m); then
   # Merry Christmas.
   mplayer -loop 0 -rootwin -volume 0 .christmas_video.mp4
