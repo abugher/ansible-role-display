@@ -3,7 +3,7 @@ user_groups:
   - 'display'
 users:
   - 'display'
-add_user_to_groups:
+add_users_to_groups:
   - user:               'display'
     groups:             'audio'
 install_packages:
