@@ -8,6 +8,7 @@ add_users_to_groups:
     groups:             'audio'
 install_packages:
   - 'pavucontrol'
+  - 'pulseaudio'
   - 'xserver-xorg'
   - 'xinit'
   - 'xscreensaver'
