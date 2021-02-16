@@ -5,7 +5,9 @@ users:
   - 'display'
 add_users_to_groups:
   - user:               'display'
-    groups:             'audio'
+    groups:
+      - 'audio'
+      - 'video'
 install_packages:
   - 'mplayer'           # Used by .xinitrc to play the yule fire loop.
   - 'pavucontrol'
@@ -83,16 +85,10 @@ install_files:
     mode:               '0644'
     src:                "{{ role_path }}/files/conf/xinitrc"
     dest:               '/home/display/.xinitrc'
-lines_not_in_files:
-  - regexp:             '^load-module module-console-kit'
-    dest:               '/etc/pulse/default.pa'
 lines_in_files:
   - line:               '; flat-volumes = no'
     regexp:             'flat-volumes'
     dest:               '/etc/pulse/daemon.conf'
-  - line:               '; autospawn = no'
-    regexp:             '^; autospawn = '
+  - line:               'autospawn = no'
+    regexp:             '^;+ +autospawn'
     dest:               '/etc/pulse/client.conf'
-  - line:               '#load-module module-console-kit'
-    regexp:             '#load-module module-console-kit'
-    dest:               '/etc/pulse/default.pa'

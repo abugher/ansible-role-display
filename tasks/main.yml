@@ -5,7 +5,6 @@
 - include:              '../tasks/install_packages.yml'
 - include:              '../tasks/create_files.yml'
 - include:              '../tasks/install_files.yml'
-- include:              '../tasks/lines_not_in_files.yml'
 - include:              '../tasks/lines_in_files.yml'
 - include:              '../tasks/reboot.yml'
   when:                 user_groups_result.changed
@@ -14,5 +13,4 @@
                         or install_packages_result.changed
                         or create_files_result.changed
                         or install_files_result.changed
-                        or lines_not_in_files_result.changed
                         or lines_in_files_result.changed

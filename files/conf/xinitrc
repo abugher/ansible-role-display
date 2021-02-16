@@ -1,22 +1,30 @@
 pulseaudio --start
-while true; do
-  sleep 1
-  pactl set-card-profile alsa_card.pci-0000_00_1b.0 output:hdmi-stereo
-done &
-echo $! > ~/.pactl_loop.pid
-while true; do
-  sleep 1
-  if xrandr | grep -q 'HDMI-1 connected'; then
-    xrandr --output LVDS-1 --off
-    xrandr --output HDMI-1 --auto
-    exit
+
+# Disable all but the first card.
+for card in $(pactl list cards | awk -F '#' '/^Card/ {print $2}'); do
+  if ! '0' = "${card}"; then
+    pactl set-card-profile "${card}" off
   fi
-done &
-echo $! > ~/.xrandr_loop.pid
+done
+
+# Enable HDMI output.  First find the monitor.
+output="$(xrandr | awk '/^HDMI/ {print $1}')"
+# Try until it sticks.  (May not work while monitor is disengaged.)
+while ! xrandr | grep -A 1 "${output}" | tail -n 1 | grep -q '\*'; do
+  sleep 1
+  # Don't even try unless the monitor seems to be connected.
+  if xrandr | grep -A 1 "${output}" | tail -n 1 | grep -q '^   '; then
+    xrandr --output "${output}" --auto
+  fi
+# Do not background.  It may take a while to complete, but until the monitor is
+# working, no one will miss the window manager.
+done
+
 if test 12 -eq $(date +%m); then
   # Merry Christmas.
   mplayer -loop 0 -rootwin -volume 0 .christmas_video.mp4
 else
   xscreensaver -nosplash
 fi &
+
 exec i3
