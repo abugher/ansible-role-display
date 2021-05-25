@@ -1,8 +1,9 @@
 pulseaudio --start
 
 # Disable all but the first card.
+# (Maybe card selection should be templated from hostvars.)
 for card in $(pactl list cards | awk -F '#' '/^Card/ {print $2}'); do
-  if ! '0' = "${card}"; then
+  if ! test '0' = "${card}"; then
     pactl set-card-profile "${card}" off
   fi
 done
