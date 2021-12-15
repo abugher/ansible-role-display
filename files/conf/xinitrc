@@ -21,7 +21,7 @@ while ! xrandr | grep -A 1 "${output}" | tail -n 1 | grep -q '\*'; do
 # working, no one will miss the window manager.
 done
 
-if test 12 -eq $(date +%m); then
+if test 12 -eq $(date +%m) && test -e .christmas_video.mp4; then
   # Merry Christmas.
   mplayer -loop 0 -rootwin -volume 0 .christmas_video.mp4
 else
