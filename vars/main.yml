@@ -8,6 +8,7 @@ add_users_to_groups:
     groups:
       - 'audio'
       - 'video'
+      - 'render'
 install_packages:
   - 'mplayer'           # Used by .xinitrc to play the yule fire loop.
   - 'pavucontrol'
