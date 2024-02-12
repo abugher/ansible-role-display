@@ -22,7 +22,7 @@ install_packages:
   - 'xscreensaver-screensaver-bsod'
   - 'xscreensaver-screensaver-dizzy'
   - 'xscreensaver-screensaver-webcollage'
-  - 'i3'
+  - 'i3-wm'
 create_files:
   - owner:              'display'
     group:              'display'
