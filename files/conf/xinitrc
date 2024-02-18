@@ -37,7 +37,7 @@ if test 12 -eq $(date +%m) && test -e "${christmas_video}"; then
   mpv --loop=0 --wid=0 "${christmas_video}" &
 else
   /usr/libexec/xscreensaver/sonar --no-wobble --root &
-#  xscreensaver -nosplash &
+  xscreensaver -nosplash &
 fi
 
 exec i3
