@@ -31,7 +31,7 @@ dpmsSuspend:                    2:00:00
 dpmsOff:                        4:00:00
 grabDesktopImages:              True
 grabVideoFrames:                True
-chooseRandomImages:             False
+chooseRandomImages:             True
 imageDirectory: 
 
 mode:                           random
