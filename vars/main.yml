@@ -24,6 +24,11 @@ install_packages:
   - 'xscreensaver-screensaver-dizzy'
   - 'xscreensaver-screensaver-webcollage'
   - 'i3-wm'
+adjust_files:
+  - owner:              'root'
+    group:              'display'
+    mode:               '4754'
+    path:               '/usr/libexec/xscreensaver/sonar'
 create_files:
   - owner:              'display'
     group:              'display'
