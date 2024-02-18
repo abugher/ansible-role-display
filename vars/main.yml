@@ -10,7 +10,7 @@ add_users_to_groups:
       - 'video'
       - 'render'
 install_packages:
-  - 'mplayer'           # Used by .xinitrc to play the yule fire loop.
+  - 'mpv'
   - 'pavucontrol'
   - 'pulseaudio'
   - 'xserver-xorg'

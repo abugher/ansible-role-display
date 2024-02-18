@@ -31,9 +31,10 @@ while test 'no' == "${hdmi_sound_enabled}"; do
 done
 
 
-if test 12 -eq $(date +%m) && test -e .christmas_video.mp4; then
+christmas_video='/storage/bittorrent/content/fireplace.mp4'
+if test 12 -eq $(date +%m) && test -e "${christmas_video}"; then
   # Merry Christmas.
-  mplayer -loop 0 -rootwin -volume 0 .christmas_video.mp4
+  mpv --loop=0 --wid=0 "${christmas_video}"
 else
   xscreensaver -nosplash
 fi &
