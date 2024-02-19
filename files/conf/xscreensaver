@@ -43,258 +43,260 @@ textFile:
 textProgram:                    xscreensaver-text
 textURL:                        http://planet.debian.org/rss20.xml
 
+# Sorted in vim:
+# :'<,'>sort /^[- ] [G ][L ][: ]/
 programs:                                                                       \
-                                anemone -root                                   \n\
-                                barcode -root                                   \n\
-                                binaryring -root                                \n\
-                                blaster -root                                   \n\
-                                cloudlife -root                                 \n\
-                                compass -root                                   \n\
-                                coral -root                                     \n\
-                                cwaves -root                                    \n\
-                                cynosure -root                                  \n\
-                                decayscreen -root                               \n\
-                                deco -root                                      \n\
-                                deluxe -root                                    \n\
-                                discrete -root                                  \n\
-                                distort -root                                   \n\
-                                drift -root                                     \n\
-                                epicycle -root                                  \n\
-                                eruption -root                                  \n\
-                                euler2d -root                                   \n\
-                                fiberlamp -root                                 \n\
-                                fireworkx -root                                 \n\
-                                flame -root                                     \n\
-                                flow -root                                      \n\
-                                fluidballs -root                                \n\
-                                fontglide -root                                 \n\
-                                fuzzyflakes -root                               \n\
-                                galaxy -root                                    \n\
-                                goop -root                                      \n\
-                                grav -root                                      \n\
-                                greynetic -root                                 \n\
-                                halftone -root                                  \n\
-                                halo -root                                      \n\
-                                helix -root                                     \n\
-                                hexadrop -root                                  \n\
-                                hopalong -root                                  \n\
-                                ifs -root                                       \n\
-                                imsmap -root                                    \n\
-                                interaggregate -root                            \n\
-                                interference -root                              \n\
-                                intermomentary -root                            \n\
-                                julia -root                                     \n\
-                                loop -root                                      \n\
-                                marbling -root                                  \n\
-                                noseguy -root                                   \n\
-                                pacman -root                                    \n\
-                                penetrate -root                                 \n\
-                                pong -root                                      \n\
-                                pyro -root                                      \n\
-                                rd-bomb -root                                   \n\
-                                ripples -root                                   \n\
-                                rorschach -root                                 \n\
-                                starfish -root                                  \n\
-                                unicode -root                                   \n\
-                                whirlwindwarp -root                             \n\
-                                xmatrix -root                                   \n\
-                                zoom -root                                      \n\
+-                               abstractile -root                               \n\
+-                               anemone -root                                   \n\
+-                               anemotaxis -root                                \n\
+  GL:                           antinspect -root                                \n\
   GL:                           antmaze -root                                   \n\
   GL:                           antspotlight -root                              \n\
-  GL:                           atlantis -root                                  \n\
-  GL:                           beats -root                                     \n\
-  GL:                           blinkbox -root                                  \n\
-  GL:                           blocktube -root                                 \n\
-  GL:                           bouncingcow -root                               \n\
-  GL:                           boxed -root                                     \n\
-  GL:                           bubble3d -root                                  \n\
-  GL:                           circuit -root                                   \n\
-  GL:                           cityflow -root                                  \n\
-  GL:                           companioncube -root                             \n\
-  GL:                           crackberg -root                                 \n\
-  GL:                           crumbler -root                                  \n\
-  GL:                           cube21 -root                                    \n\
-  GL:                           cubenetic -root                                 \n\
-  GL:                           cubestack -root                                 \n\
-  GL:                           cubestorm -root                                 \n\
-  GL:                           cubetwist -root                                 \n\
-  GL:                           cubicgrid -root                                 \n\
-  GL:                           dangerball -root                                \n\
-  GL:                           deepstars -root                                 \n\
-  GL:                           discoball -root                                 \n\
-  GL:                           dymaxionmap -root                               \n\
-  GL:                           endgame -root                                   \n\
-  GL:                           energystream -root                              \n\
-  GL:                           engine -root                                    \n\
-  GL:                           extrusion -root                                 \n\
-  GL:                           flipflop -root                                  \n\
-  GL:                           flipscreen3d -root                              \n\
-  GL:                           fliptext -root                                  \n\
-  GL:                           flurry -root                                    \n\
-  GL:                           flyingtoasters -root                            \n\
-  GL:                           gears -root                                     \n\
-  GL:                           geodesic -root                                  \n\
-  GL:                           geodesicgears -root                             \n\
-  GL:                           gflux -root                                     \n\
-  GL:                           glcells -root                                   \n\
-  GL:                           gleidescope -root                               \n\
-  GL:                           glhanoi -root                                   \n\
-  GL:                           glknots -root                                   \n\
-  GL:                           glmatrix -root                                  \n\
-  GL:                           glplanet -root                                  \n\
-  GL:                           glschool -root                                  \n\
-  GL:                           glsnake -root                                   \n\
-  GL:                           gltext -root                                    \n\
-  GL:                           handsy -root                                    \n\
-  GL:                           hexstrut -root                                  \n\
-  GL:                           hilbert -root                                   \n\
-  GL:                           hydrostat -root                                 \n\
-  GL:                           hypertorus -root                                \n\
-  GL:                           hypnowheel -root                                \n\
-  GL:                           jigsaw -root                                    \n\
-  GL:                           juggler3d -root                                 \n\
-  GL:                           kaleidocycle -root                              \n\
-  GL:                           klein -root                                     \n\
-  GL:                           lament -root                                    \n\
-  GL:                           lavalite -root                                  \n\
-  GL:                           lockward -root                                  \n\
-  GL:                           maze3d -root                                    \n\
-  GL:                           mirrorblob -root                                \n\
-  GL:                           moebius -root                                   \n\
-  GL:                           molecule -root                                  \n\
-  GL:                           morph3d -root                                   \n\
-  GL:                           noof -root                                      \n\
-  GL:                           peepers -root                                   \n\
-  GL:                           pinion -root                                    \n\
-  GL:                           pipes -root                                     \n\
-  GL:                           polyhedra -root                                 \n\
-  GL:                           polytopes -root                                 \n\
-  GL:                           projectiveplane -root                           \n\
-  GL:                           raverhoop -root                                 \n\
-  GL:                           splodesic -root                                 \n\
-  GL:                           sproingies -root                                \n\
-  GL:                           squirtorus -root                                \n\
-  GL:                           stairs -root                                    \n\
-  GL:                           stonerview -root                                \n\
-  GL:                           superquadrics -root                             \n\
-  GL:                           surfaces -root                                  \n\
-  GL:                           tangram -root                                   \n\
-  GL:                           topblock -root                                  \n\
-  GL:                           unicrud -root                                   \n\
-  GL:                           winduprobot -root                               \n\
--                               abstractile -root                               \n\
--                               anemotaxis -root                                \n\
 -                               apollonian -root                                \n\
 -                               apple2 -root                                    \n\
+  GL:                           atlantis -root                                  \n\
 -                               attraction -root                                \n\
+  GL:                           atunnel -root                                   \n\
+                                barcode -root                                   \n\
+  GL:                           beats -root                                     \n\
 -                               binaryhorizon -root                             \n\
+-                               binaryring -root                                \n\
+                                blaster -root                                   \n\
+- GL:                           blinkbox -root                                  \n\
 -                               blitspin -root                                  \n\
+  GL:                           blocktube -root                                 \n\
+- GL:                           boing -root                                     \n\
 -                               bouboule -root                                  \n\
+  GL:                           bouncingcow -root                               \n\
+  GL:                           boxed -root                                     \n\
 -                               boxfit -root                                    \n\
 -                               braid -root                                     \n\
 -                               bsod -root                                      \n\
+  GL:                           bubble3d -root                                  \n\
 -                               bumps -root                                     \n\
+  GL:                           cage -root                                      \n\
+- GL:                           carousel -root                                  \n\
 -                               ccurve -root                                    \n\
 -                               celtic -root                                    \n\
+- GL:                           chompytower -root                               \n\
+- GL:                           circuit -root                                   \n\
+- GL:                           cityflow -root                                  \n\
+-                               cloudlife -root                                 \n\
+- GL:                           companioncube -root                             \n\
+-                               compass -root                                   \n\
+-                               coral -root                                     \n\
+- GL:                           covid19 -root                                   \n\
+- GL:                           crackberg -root                                 \n\
+  GL:                           crumbler -root                                  \n\
 -                               crystal -root                                   \n\
+- GL:                           cube21 -root                                    \n\
+- GL:                           cubenetic -root                                 \n\
+- GL:                           cubestack -root                                 \n\
+- GL:                           cubestorm -root                                 \n\
+  GL:                           cubetwist -root                                 \n\
+  GL:                           cubicgrid -root                                 \n\
+-                               cwaves -root                                    \n\
+-                               cynosure -root                                  \n\
+- GL:                           dangerball -root                                \n\
+                                decayscreen -root                               \n\
+-                               deco -root                                      \n\
+  GL:                           deepstars -root                                 \n\
+-                               deluxe -root                                    \n\
 -                               demon -root                                     \n\
+- GL:                           discoball -root                                 \n\
+-                               discrete -root                                  \n\
+                                distort -root                                   \n\
+-                               drift -root                                     \n\
+  GL:                           dymaxionmap -root                               \n\
+- GL:                           endgame -root                                   \n\
+- GL:                           energystream -root                              \n\
+  GL:                           engine -root                                    \n\
+-                               epicycle -root                                  \n\
+-                               eruption -root                                  \n\
+- GL:                           esper -root                                     \n\
+- GL:                           etruscanvenus -root                             \n\
+-                               euler2d -root                                   \n\
+- GL:                           extrusion -root                                 \n\
 -                               fadeplot -root                                  \n\
+                                fiberlamp -root                                 \n\
 -                               filmleader -root                                \n\
+-                               fireworkx -root                                 \n\
+-                               flame -root                                     \n\
+  GL:                           flipflop -root                                  \n\
+- GL:                           flipscreen3d -root                              \n\
+- GL:                           fliptext -root                                  \n\
+-                               flow -root                                      \n\
+                                fluidballs -root                                \n\
+- GL:                           flurry -root                                    \n\
+  GL:                           flyingtoasters -root                            \n\
+-                               fontglide -root                                 \n\
+                                fuzzyflakes -root                               \n\
+                                galaxy -root                                    \n\
+  GL:                           gears -root                                     \n\
+- GL:                           geodesic -root                                  \n\
+  GL:                           geodesicgears -root                             \n\
+- GL:                           gflux -root                                     \n\
+- GL:                           gibson -root                                    \n\
+- GL:                           glblur -root                                    \n\
+- GL:                           glcells -root                                   \n\
+- GL:                           gleidescope -root                               \n\
+  GL:                           glhanoi -root                                   \n\
 -                               glitchpeg -root                                 \n\
+- GL:                           glknots -root                                   \n\
+  GL:                           glmatrix -root                                  \n\
+- GL:                           glplanet -root                                  \n\
+  GL:                           glschool -root                                  \n\
+- GL:                           glslideshow -root                               \n\
+- GL:                           glsnake -root                                   \n\
+- GL:                           gltext -root                                    \n\
+-                               goop -root                                      \n\
+                                grav -root                                      \n\
+- GL:                           gravitywell -root                               \n\
+-                               greynetic -root                                 \n\
+-                               halftone -root                                  \n\
+-                               halo -root                                      \n\
+  GL:                           handsy -root                                    \n\
+- GL:                           headroom -root                                  \n\
+-                               helix -root                                     \n\
+-                               hexadrop -root                                  \n\
+- GL:                           hexstrut -root                                  \n\
+- GL:                           hextrail -root                                  \n\
+- GL:                           hilbert -root                                   \n\
+-                               hopalong -root                                  \n\
+- GL:                           hydrostat -root                                 \n\
+  GL:                           hypertorus -root                                \n\
+- GL:                           hypnowheel -root                                \n\
+-                               ifs -root                                       \n\
+-                               imsmap -root                                    \n\
+-                               interaggregate -root                            \n\
+-                               interference -root                              \n\
+                                intermomentary -root                            \n\
+- GL:                           jigglypuff -root                                \n\
+- GL:                           jigsaw -root                                    \n\
+  GL:                           juggler3d -root                                 \n\
+-                               julia -root                                     \n\
 -                               kaleidescope -root                              \n\
+- GL:                           kaleidocycle -root                              \n\
+- GL:                           klein -root                                     \n\
 -                               kumppa -root                                    \n\
+  GL:                           lament -root                                    \n\
+  GL:                           lavalite -root                                  \n\
 -                               lcdscrub -root                                  \n\
+- GL:                           lockward -root                                  \n\
+                                loop -root                                      \n\
 -                               m6502 -root                                     \n\
+- GL:                           mapscroller -root                               \n\
+                                marbling -root                                  \n\
 -                               maze -root                                      \n\
+  GL:                           maze3d -root                                    \n\
 -                               memscroller -root                               \n\
+- GL:                           menger -root                                    \n\
 -                               metaballs -root                                 \n\
+  GL:                           mirrorblob -root                                \n\
+  GL:                           moebius -root                                   \n\
+- GL:                           moebiusgears -root                              \n\
 -                               moire -root                                     \n\
 -                               moire2 -root                                    \n\
+  GL:                           molecule -root                                  \n\
+  GL:                           morph3d -root                                   \n\
 -                               mountain -root                                  \n\
 -                               munch -root                                     \n\
+- GL:                           nakagin -root                                   \n\
 -                               nerverot -root                                  \n\
+  GL:                           noof -root                                      \n\
+                                noseguy -root                                   \n\
+                                pacman -root                                    \n\
 -                               pedal -root                                     \n\
+  GL:                           peepers -root                                   \n\
+                                penetrate -root                                 \n\
 -                               penrose -root                                   \n\
 -                               petri -root                                     \n\
 -                               phosphor -root                                  \n\
+- GL:                           photopile -root                                 \n\
 -                               piecewise -root                                 \n\
+- GL:                           pinion -root                                    \n\
+  GL:                           pipes -root                                     \n\
+  GL:                           polyhedra -root                                 \n\
 -                               polyominoes -root                               \n\
+- GL:                           polytopes -root                                 \n\
+                                pong -root                                      \n\
 -                               popsquares -root                                \n\
+- GL:                           projectiveplane -root                           \n\
+- GL:                           providence -root                                \n\
+- GL:                           pulsar -root                                    \n\
+                                pyro -root                                      \n\
 -                               qix -root                                       \n\
+- GL:                           quasicrystal -root                              \n\
+- GL:                           queens -root                                    \n\
+  GL:                           raverhoop -root                                 \n\
+- GL:                           razzledazzle -root                              \n\
+                                rd-bomb -root                                   \n\
 -                               rdbomb -root                                    \n\
+                                ripples -root                                   \n\
 -                               rocks -root                                     \n\
+- GL:                           romanboy -root                                  \n\
+-                               rorschach -root                                 \n\
 -                               rotzoomer -root                                 \n\
+- GL:                           rubik -root                                     \n\
+- GL:                           rubikblocks -root                               \n\
+- GL:                           sballs -root                                    \n\
 -                               scooter -root                                   \n\
 -                               shadebobs -root                                 \n\
 -                               sierpinski -root                                \n\
+- GL:                           sierpinski3d -root                              \n\
+- GL:                           skytentacles -root                              \n\
 -                               slidescreen -root                               \n\
 -                               slip -root                                      \n\
+- GL:                           sonar -root                                     \n\
 -                               speedmine -root                                 \n\
+- GL:                           sphereeversion -root                            \n\
+- GL:                           spheremonics -root                              \n\
+- GL:                           splitflap -root                                 \n\
+  GL:                           splodesic -root                                 \n\
 -                               spotlight -root                                 \n\
+  GL:                           sproingies -root                                \n\
 -                               squiral -root                                   \n\
+  GL:                           squirtorus -root                                \n\
+  GL:                           stairs -root                                    \n\
+-                               starfish -root                                  \n\
+- GL:                           starwars -root                                  \n\
+  GL:                           stonerview -root                                \n\
 -                               strange -root                                   \n\
 -                               substrate -root                                 \n\
+- GL:                           superquadrics -root                             \n\
+- GL:                           surfaces -root                                  \n\
 -                               swirl -root                                     \n\
+  GL:                           tangram -root                                   \n\
 -                               tessellimage -root                              \n\
 -                               thornbird -root                                 \n\
--                               triangle -root                                  \n\
+- GL:                           timetunnel -root                                \n\
+  GL:                           topblock -root                                  \n\
+                                triangle -root                                  \n\
+- GL:                           tronbit -root                                   \n\
 -                               truchet -root                                   \n\
 -                               twang -root                                     \n\
+                                unicode -root                                   \n\
+  GL:                           unicrud -root                                   \n\
+- GL:                           unknownpleasures -root                          \n\
 -                               vermiculate -root                               \n\
 -                               vfeedback -root                                 \n\
 -                               vidwhacker -root                                \n\
+- GL:                           vigilance -root                                 \n\
+- GL:                           voronoi -root                                   \n\
 -                               wander -root                                    \n\
 -                               webcollage -root                                \n\
+                                whirlwindwarp -root                             \n\
+  GL:                           winduprobot -root                               \n\
 -                               wormhole -root                                  \n\
 -                               xanalogtv -root                                 \n\
 -                               xflame -root                                    \n\
 -                               xjack -root                                     \n\
 -                               xlyap -root                                     \n\
+                                xmatrix -root                                   \n\
 -                               xrayswarm -root                                 \n\
 -                               xscreensaver-getimage -root                     \n\
 -                               xspirograph -root                               \n\
-- GL:                           antinspect -root                                \n\
-- GL:                           atunnel -root                                   \n\
-- GL:                           boing -root                                     \n\
-- GL:                           cage -root                                      \n\
-- GL:                           carousel -root                                  \n\
-- GL:                           chompytower -root                               \n\
-- GL:                           covid19 -root                                   \n\
-- GL:                           esper -root                                     \n\
-- GL:                           etruscanvenus -root                             \n\
-- GL:                           gibson -root                                    \n\
-- GL:                           glblur -root                                    \n\
-- GL:                           glslideshow -root                               \n\
-- GL:                           gravitywell -root                               \n\
-- GL:                           headroom -root                                  \n\
-- GL:                           hextrail -root                                  \n\
-- GL:                           jigglypuff -root                                \n\
-- GL:                           mapscroller -root                               \n\
-- GL:                           menger -root                                    \n\
-- GL:                           moebiusgears -root                              \n\
-- GL:                           nakagin -root                                   \n\
-- GL:                           photopile -root                                 \n\
-- GL:                           providence -root                                \n\
-- GL:                           pulsar -root                                    \n\
-- GL:                           quasicrystal -root                              \n\
-- GL:                           queens -root                                    \n\
-- GL:                           razzledazzle -root                              \n\
-- GL:                           romanboy -root                                  \n\
-- GL:                           rubik -root                                     \n\
-- GL:                           rubikblocks -root                               \n\
-- GL:                           sballs -root                                    \n\
-- GL:                           sierpinski3d -root                              \n\
-- GL:                           skytentacles -root                              \n\
-- GL:                           sonar -root                                     \n\
-- GL:                           sphereeversion -root                            \n\
-- GL:                           spheremonics -root                              \n\
-- GL:                           splitflap -root                                 \n\
-- GL:                           starwars -root                                  \n\
-- GL:                           timetunnel -root                                \n\
-- GL:                           tronbit -root                                   \n\
-- GL:                           unknownpleasures -root                          \n\
-- GL:                           vigilance -root                                 \n\
-- GL:                           voronoi -root                                   \n\
+-                               zoom -root                                      \n\
 
 
 pointerPollTime:    0:00:05
