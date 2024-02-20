@@ -271,7 +271,7 @@ programs:                                                                       
 -                               thornbird -root                                 \n\
 - GL:                           timetunnel -root                                \n\
   GL:                           topblock -root                                  \n\
-                                triangle -root                                  \n\
+-                               triangle -root                                  \n\
 - GL:                           tronbit -root                                   \n\
 -                               truchet -root                                   \n\
 -                               twang -root                                     \n\
