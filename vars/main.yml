@@ -1,9 +1,6 @@
 ---
-gather_subset_of_facts:
-  - 'distribution'
 user_groups:
   - 'display'
-  - 'render'            # Does not exist by default on Ubuntu Bionic.
 users:
   - 'display'
 add_users_to_groups:
@@ -27,13 +24,11 @@ install_packages:
   - 'xscreensaver-screensaver-dizzy'
   - 'xscreensaver-screensaver-webcollage'
   - 'i3-wm'
-ubuntu_sonar_path:      '/usr/lib/xscreensaver/sonar'
-debian_sonar_path:      '/usr/libexec/xscreensaver/sonar'
 adjust_files:
   - owner:              'root'
     group:              'display'
     mode:               '4754'
-    path:               "{{ ubuntu_sonar_path if 'Ubuntu' == ansible_facts['distribution'] else debian_sonar_path }}"
+    path:               '/usr/libexec/xscreensaver/sonar'
 create_files:
   - owner:              'display'
     group:              'display'
