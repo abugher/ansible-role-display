@@ -9,6 +9,8 @@ add_users_to_groups:
       - 'audio'
       - 'video'
       - 'render'
+remove_packages:
+  - 'pipewire'
 install_packages:
   - 'mpv'
   - 'pavucontrol'

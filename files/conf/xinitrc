@@ -1,43 +1,85 @@
-pulseaudio --start
+#!/bin/sh
 
-# HDMI video:
-hdmi_video_enabled='no'
-output="$(xrandr | awk '/^HDMI/ {print $1}' | head -n 1)"
-while test 'no' == "${hdmi_video_enabled}"; do
-  # Don't even try unless the monitor seems to be connected.
-  if xrandr | grep -A 1 "${output}" | tail -n 1 | grep -q '^   '; then
-    xrandr --output "${output}" --auto
-  fi
-  if xrandr | grep -A 1 "${output}" | tail -n 1 | grep -q '\*'; then
-    hdmi_video_enabled='yes'
-  else
-    sleep 1
-  fi
-done
 
-# HDMI audio:
-hdmi_sound_enabled='no'
-while test 'no' == "${hdmi_sound_enabled}"; do
-  for card in $(pactl list cards | awk -F '#' '/^Card/ {print $2}'); do
-    # Disable anything, first.
-    pactl set-card-profile "${card}" off
-    # If it is HDMI, turn it on.
-    if pactl set-card-profile "${card}" output:hdmi-stereo; then
-      hdmi_sound_enabled='yes'
+main() {
+  setup > ~/.startx_setup.log 2>&1
+  exec i3
+}
+
+
+setup() {
+  echo "Starting setup."
+  start_sound_daemon
+  enable_hdmi_video
+  disable_other_video
+  enable_hdmi_sound
+  enable_background_art
+  echo "Setup complete."
+}
+
+
+start_sound_daemon() {
+  pulseaudio --start
+}
+
+
+enable_hdmi_video() {
+  echo "Enabling HDMI video."
+  hdmi_video_enabled='no'
+  hdmi_output="$(xrandr | awk '/^HDMI/ {print $1}' | head -n 1)"
+  while test 'no' = "${hdmi_video_enabled}"; do
+    # Don't even try unless the monitor seems to be connected.
+    if xrandr | grep -A 1 "${hdmi_output}" | tail -n 1 | grep -q '^   '; then
+      xrandr --output "${hdmi_output}" --auto
+    fi
+    if xrandr | grep -A 1 "${hdmi_output}" | tail -n 1 | grep -q '\*'; then
+      hdmi_video_enabled='yes'
     else
       sleep 1
     fi
   done
-done
+}
 
-# Idle time fillers:
-christmas_video='/storage/bittorrent/content/fireplace.mp4'
-if test 12 -eq $(date +%m) && test -e "${christmas_video}"; then
-  # Merry Christmas.
-  mpv --loop=0 --wid=0 "${christmas_video}" &
-else
-  /usr/libexec/xscreensaver/sonar --no-wobble --root &
-  xscreensaver -nosplash &
-fi
 
-exec i3
+disable_other_video() {
+  echo "Disabling other video."
+  for output in $(xrandr | tail -n +2 | awk '/^[^ ]/ {print $1}'); do
+    if ! test "${hdmi_output}" = "${output}"; then
+      xrandr --output "${output}" --off
+    fi
+  done
+}
+
+
+enable_hdmi_sound() {
+  echo "Enabling HDMI sound."
+  hdmi_sound_enabled='no'
+  while test 'no' = "${hdmi_sound_enabled}"; do
+    for card in $(pactl list cards | awk -F '#' '/^Card/ {print $2}'); do
+      # Disable card by default.
+      pactl set-card-profile "${card}" off
+      # Enable card for HDMI if possible.
+      if pactl set-card-profile "${card}" output:hdmi-stereo; then
+        hdmi_sound_enabled='yes'
+      else
+        sleep 1
+      fi
+    done
+  done
+}
+
+
+enable_background_art() {
+  echo "Enabling background art."
+  christmas_video='/storage/bittorrent/content/fireplace.mp4'
+  if test 12 -eq $(date +%m) && test -e "${christmas_video}"; then
+    # Merry Christmas.
+    mpv --loop=0 --wid=0 "${christmas_video}" &
+  else
+    /usr/libexec/xscreensaver/sonar --no-wobble --root &
+    xscreensaver -nosplash &
+  fi
+}
+
+
+main
