@@ -71,7 +71,8 @@ enable_hdmi_sound() {
 
 enable_background_art() {
   echo "Enabling background art."
-  christmas_video='/storage/bittorrent/content/fireplace.mp4'
+  # This video is not tracked in git or controlled by ansible.
+  christmas_video=~/fireplace.mp4
   if test 12 -eq $(date +%m) && test -e "${christmas_video}"; then
     # Merry Christmas.
     mpv --loop=0 --wid=0 "${christmas_video}" &
